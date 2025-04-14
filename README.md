@@ -1,1 +1,3 @@
-# how-javascript-things-work
+# JavaScript in Depth
+
+Code samples from the book
