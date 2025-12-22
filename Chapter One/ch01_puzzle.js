@@ -1,4 +1,19 @@
-// A puzzle
+// Chapter 1: How JavaScript Runs - Advanced Concurrency Puzzle
+// See: "Worker threads", "Child processes", and "Atomics"
+//
+// This puzzle demonstrates the full complexity of JavaScript concurrency:
+// multiple execution contexts (main thread, worker, child process),
+// synchronization primitives (SharedArrayBuffer, Atomics), and the
+// intricate ordering of different scheduling mechanisms.
+//
+// The output spells a message based on the precise timing and order
+// of events across threads and processes. Understanding why each
+// character appears when it does requires understanding all of
+// async scheduling primitives in the runtime and will vary from one
+// runtime to the next.
+//
+// Run with: node ch01_puzzle.js
+
 const { Worker, isMainThread, workerData, parentPort } =
     require('worker_threads');
 const { fork } = require('child_process');
